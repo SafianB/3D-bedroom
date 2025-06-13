@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: #d0ac57;
   margin: 0;
   font-family: 'SF Distant Galaxy';
 }
@@ -15,15 +15,15 @@ body {
   padding: 32px;
 }
 
-.border {
+/* .border {
   background: linear-gradient(90deg, gray, 90%, black);
   height: 2px;
   width: 80vw;
   margin-top: 4px;
-}
+} */
 
 h1 {
-  color: rgb(215, 215, 215);
+  color: rgb(236, 123, 123);
   font-size: 4em;
   margin: 0px;
   font-weight: 100;

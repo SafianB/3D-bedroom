@@ -16,8 +16,9 @@ document.body.appendChild(renderer.domElement);
 
 const scene = new THREE.Scene();
 
+
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
-camera.position.set(20, 20, 20);
+camera.position.set(30, 50, 20);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
