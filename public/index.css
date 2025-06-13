@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #d0ac57;
+  background-color: #000000;
   margin: 0;
   font-family: 'SF Distant Galaxy';
 }
@@ -23,10 +23,14 @@ body {
 } */
 
 h1 {
-  color: rgb(236, 123, 123);
+  color: rgb(252, 252, 252);
   font-size: 4em;
   margin: 0px;
   font-weight: 100;
+}
+
+p{
+  color: aliceblue;
 }
 
 #progress-container {
