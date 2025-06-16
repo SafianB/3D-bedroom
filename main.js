@@ -1,6 +1,8 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { RectAreaLightHelper } from 'three/addons/helpers/RectAreaLightHelper.js';
+import { RectAreaLightUniformsLib } from 'three/addons/lights/RectAreaLightUniformsLib.js';
 
 
 
@@ -48,6 +50,27 @@ groundMesh.castShadow = false;
 groundMesh.receiveShadow = true;
 scene.add(groundMesh);
 
+RectAreaLightUniformsLib.init();
+
+// const rectLight1 = new THREE.RectAreaLight( 0xeed6a0, 5, 4, 10 );
+// 				rectLight1.position.set( - 5, 5, 5);
+// 				scene.add( rectLight1 );
+
+				const rectLight2 = new THREE.RectAreaLight( 0xeed6a0, 4, 10, 8 );
+				rectLight2.position.set( 0, 10, 0 );
+        rectLight2.lookAt( 0, 5, 0 );
+				scene.add( rectLight2 );
+
+				// const rectLight3 = new THREE.RectAreaLight( 0xeed6a0, 5, 4, 10 );
+				// rectLight3.position.set( 5, 5, -7 );
+        // rectLight3.lookAt( 0, 5, 0 );
+				// scene.add( rectLight3 );
+
+				// scene.add( new RectAreaLightHelper( rectLight1 ) );
+				// scene.add( new RectAreaLightHelper( rectLight2 ) );
+				// scene.add( new RectAreaLightHelper( rectLight3 ) );
+
+
 const spotLight = new THREE.SpotLight(0xeed6a0, 3000, 100, 0.30, 0.5);
 spotLight.position.set(0, 23, 0);
 spotLight.castShadow = true;
@@ -80,7 +103,7 @@ loader.load('scene.gltf', (gltf) => {
   console.error(error);
 });
 
-loader.load
+
 
 window.addEventListener('resize', () => {
   camera.aspect = window.innerWidth / window.innerHeight;
@@ -106,3 +129,4 @@ const render = () => {
 }
 
 render();
+

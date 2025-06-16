@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Millennium Falcon</title>
+		<title>Safin's Space</title>
 
 		<link rel="stylesheet" href="public/index.css">
 
@@ -17,18 +17,37 @@
     </script>
 	</head>
 	<body>
-    <div id="heading">
-      <h1>My Space</h1>
-      <p>Move camera: 1-finger drag or Left Mouse Button <br>
+    <div id="progress-container">
+      <div id="progress">Loading...</div>
+    </div>
+   <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <p>Move camera: 1-finger drag or Left Mouse Button <br>
         Pan: 2-finger drag or Right Mouse Button or SHIFT+ Left Mouse Button<br>
         Zoom on object: Double-tap or Double-click on object<br>
         Zoom out: Double-tap or Double-click on background<br>
         Zoom: Pinch in/out or Mousewheel or CTRL + Left Mouse Button</p>
+</div>
+    <div id="heading">
+      <h1>My Space</h1>
       <div class="border"></div>
-    </div>
-    <div id="progress-container">
-      <div id="progress">Loading...</div>
+        <div id="main">
+            <h2></h2>
+            <p></p>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; help</span>
+        </div>
     </div>
 		<script type="module" src="./main.js"></script>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
+</script>
 	</body>
 </html>
