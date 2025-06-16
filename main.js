@@ -111,6 +111,26 @@ window.addEventListener('resize', () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
+
+const raycaster = new THREE.Raycaster();
+
+document.addEventListener('mousedown', onMouseDown);
+
+function onMouseDown(even){
+  const coords = new THREE.Vector2(
+    (even.clientX / renderer.domElement.clientWidth) * 2 - 1, 
+    - ((even.clientY / renderer.domElement.clientHeight) * 2 - 1)
+  );
+
+  raycaster.setFromCamera(coords, camera);
+
+  const intersection = raycaster.intersectObjects(scene.children, true);
+  if(intersection.length > 0){
+    console.log(intersection);
+  }
+
+}
+
 function animate() {
   requestAnimationFrame(animate);
   controls.update();

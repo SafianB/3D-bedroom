@@ -1,12 +1,12 @@
-@font-face {
+/* @font-face {
   font-family: 'SF Distant Galaxy';
   src: local('SF Distant Galaxy'), url(fonts/SF\ Distant\ Galaxy.ttf), format('ttf');
-}
+} */
 
 body {
   background-color: #ffffff;
   margin: 0;
-  font-family: 'SF Distant Galaxy';
+  font-family: "Chelsea Market", system-ui;
 }
 
 #heading {
